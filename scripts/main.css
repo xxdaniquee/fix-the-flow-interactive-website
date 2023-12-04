@@ -1,0 +1,631 @@
+:root {
+    /* COLORS */
+    --c-background: #ffffff;
+    --c-textblock: #dfe4e5;
+    --c-accent-green: #d4e9db;
+    --c-main-green: #46aa64;
+    --c-hover-green: #2A633B;
+    --c-main-blue: #0a3250;
+    --c-hover-blue: #062026;
+    --c-ex-dark: #111111;
+  
+    /* BORDER */
+    --border: 3px solid var(--c-main-green);
+  
+    /* TRANSITION */
+    --transition: 0.4s ease;
+  }
+
+@font-face {
+    font-family: 'ITC Avant Garde Std Bold';
+    src: url('ITCAvantGardeStd-Bold.eot');
+    src: local('ITC Avant Garde Gothic Std Bold'), local('ITCAvantGardeStd-Bold'),
+        url('ITCAvantGardeStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('ITCAvantGardeStd-Bold.woff2') format('woff2'),
+        url('ITCAvantGardeStd-Bold.woff') format('woff'),
+        url('ITCAvantGardeStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-display: auto;
+}
+  
+  @font-face {
+    font-family: 'ITC Avant Garde Std Md';
+    src: url('ITCAvantGardeStd-Md.eot');
+    src: local('ITC Avant Garde Gothic Std Medium'), local('ITCAvantGardeStd-Md'),
+        url('ITCAvantGardeStd-Md.eot?#iefix') format('embedded-opentype'),
+        url('ITCAvantGardeStd-Md.woff2') format('woff2'),
+        url('ITCAvantGardeStd-Md.woff') format('woff'),
+        url('ITCAvantGardeStd-Md.ttf') format('truetype');
+    font-weight: 500;
+    font-display: auto;
+}
+  
+@font-face {
+    font-family: 'ITC Avant Garde Std XLt';
+    src: url('ITCAvantGardeStd-XLt.eot');
+    src: local('ITC Avant Garde Gothic Std Extra Light'), local('ITCAvantGardeStd-XLt'),
+        url('ITCAvantGardeStd-XLt.eot?#iefix') format('embedded-opentype'),
+        url('ITCAvantGardeStd-XLt.woff2') format('woff2'),
+        url('ITCAvantGardeStd-XLt.woff') format('woff'),
+        url('ITCAvantGardeStd-XLt.ttf') format('truetype');
+    font-weight: 300;
+    font-display: auto;
+}
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body{
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, th{
+    font-family: 'ITC Avant Garde Std Bold', arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: var(--c-main-blue);
+  }
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+p {
+    font-family: 'ITC Avant Garde Gothic Std Medium', arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--c-main-blue);
+}
+
+a {
+    font-family: 'ITC Avant Garde Gothic Std Medium', arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: var(--c-main-green);
+    font-size: 1rem;
+}
+
+
+/*  */
+/*  */
+/*  HEADER */
+/*  */
+/*  */
+
+Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.4rem;
+    background-color: var(--c-background);
+}
+
+.logo img{  
+    max-width: 35%;
+    height: auto;
+} 
+
+
+/*  */
+/*  */
+/*  DROPDOWN MENU */
+/*  */
+/*  */
+
+
+.headBtn {
+    background-color: var(--c-background);
+    color: var(--c-main-green);
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.headBtn:hover, .headBtn:focus {
+    color: var(--c-hover-green);
+}
+
+.headmenu {
+    position: relative;
+    display: inline-block;
+}
+
+.hMenuItem {
+    display: none;
+    position: absolute;
+    background-color: var(--c-accent-green);
+    box-shadow: 0px 8px 16px 0px black 0.2;
+    z-index: 1;
+    right: 0;
+}
+
+.hMenuItem a {
+    color: var(--c-main-blue);
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    width: 32rem;
+    text-align: center;
+    border-bottom: 1px solid var(--c-main-blue);
+}
+
+.hMenuItem a:hover{
+    background-color: var(--c-main-green);
+    text-decoration: underline;
+}
+
+.show {display:block;}
+
+
+/*  */
+/*  */
+/*  TOP */
+/*  */
+/*  */
+
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.title-pic{
+    width: 100%; 
+    height: 30rem;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.top h1{
+    color: var(--c-background);
+    margin-top: 0.8rem;
+    position: absolute;
+    top: 30%;
+    transform: translate(-50% -50%);
+    text-align: center;
+    text-shadow: 0.4rem 0.4rem 0.4rem var(--c-ex-dark);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.hallen-house {
+    position: absolute;
+    width: 10rem;
+    height: 3rem;
+    vertical-align: middle;
+    top: 90%;
+
+}
+
+
+/*  */
+/*  */
+/* BUURTINITIATIEVEN  +
+    HELP EEN BUUR */
+/*  */
+/*  */
+
+
+.buurtinitiatieven h2, .buur h2{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.buurtinitiatieven p, .buur p {
+    text-align: center;
+    margin: 1rem;
+}
+  
+.buurtinitiatieven a, .buur a {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    text-decoration: none;
+    transition: var(--transition);
+    color: var(--c-main-green);
+}
+
+ .buurtinitiatieven a:hover, .buur a:hover{
+    text-decoration: underline;
+    font-size: 1.1rem;
+    color: var(--c-hover-green);
+} 
+
+
+/*  */
+/*  */
+/* CARDS */
+/*  */
+/*  */
+
+.card-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+  
+.card img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+     object-position: 50% 20%;
+}
+  
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.card-title h3{
+    border-left: var(--border);
+    padding-left: 0.8rem;
+}
+
+.card-title p{
+    color: var(--c-main-green);
+}
+
+.card p{
+    white-space: wrap;
+    text-align: left;
+}
+  
+.initiatief a, .vraag-aanbod a {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    padding: 1rem;
+    background: transparent;
+    background-color: var(--c-main-green);
+    color: var(--c-background);
+    transition: var(--transition);
+    text-decoration: none;
+}
+  
+.initiatief a:hover, .vraag-aanbod a:hover {
+    background: var(--c-hover-green);
+    color: var(--c-background);
+}
+  
+
+/*  */
+/*  */
+/* BUURTINITIATIEF AANMELDEN */
+/*  */
+/*  */
+
+
+.apply-info{
+    background-color: var(--c-textblock);
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+.apply-info h2{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.apply-info p{
+    text-align: center;
+    padding: 1rem;
+}
+
+.apply-info a{
+    margin: 2rem 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    padding: 1rem;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--c-background);
+    background-color: var(--c-main-green)
+}
+     
+.apply-info a:hover{
+    background: var(--c-hover-green);
+    color: var(--c-background);
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+
+/*  */
+/*  */
+/*  FOOTER */
+/*  */
+/*  */
+
+footer{
+    font-family: 'ITC Avant Garde Gothic Std Medium', arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    text-align:left;
+    margin-top: 1rem;
+    background-color: var(--c-main-blue);
+    color: var(--c-background);
+    padding: 1rem
+    }
+
+.row-social, .row-menu, .row-text{
+    width:100%;
+    padding: 1rem;
+    font-size:0.8rem;
+}
+
+.row-social a, .row-menu a, .row-text p{
+    text-decoration:none;
+    color: var(--c-background);
+    transition: var(--transition);
+}
+            
+.row-social a:hover, .row-menu a:hover, .row-text a:hover{
+    color: var(--c-main-green);
+}
+
+.row-menu ul li{
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+}
+
+.row-menu {
+    width:100%;
+}
+
+.row-social a i{
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+
+
+/*  */
+/*  */
+/*  AMSTERDAMS BUURVROUWENCONTACT PAGINA */
+/*  */
+/*  */
+
+
+.abc-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.abc-top img{
+    width: 100%; 
+    height: 20rem;
+    align-items: center;
+}
+
+.abc-top h1{
+    color: var(--c-background);
+    margin-top: 10px;
+    position: absolute;
+    top: 58%;
+    transform: translate(-50% -50%);
+    text-align: center;
+    text-shadow: 4px 4px 4px var(--c-ex-dark);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+.abc-info {
+    text-align: center;
+    margin: 2rem 2rem;
+    text-align: left;
+}
+
+.abc-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.abc-card-left, .abc-card-right {
+    width: 28rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--c-textblock);
+}
+  
+.abc-card-left img, .abc-card-right img{
+    width: 22rem;
+    height: 19rem;
+    margin: 1rem;
+}
+  
+
+.abc-card-left p, .abc-card-right p {
+    margin: 1rem 2rem 1.5rem 3.5rem;
+    text-align: left;
+}
+  
+.abc-card-left a, .abc-card-right a {
+    display: block;
+    margin: 1rem 3.5rem;
+    padding: 1rem;
+    width: 20rem;
+    background-color: var(--c-main-green);
+    color: var(--c-background);
+    text-decoration: none;
+    transition: var(--transition);
+    
+}
+  
+.abc-card-left a:hover, .abc-card-right a:hover {
+    background: var(--c-hover-green);
+    color: var(--c-background);
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.abc-card-left{
+    flex-direction: row-reverse;
+    margin-bottom: 5em;
+}
+
+.abc-card-right, .abc-text{
+    padding-left: 0;
+    padding-right: 1.25rem;
+}
+
+
+/*  */
+/*  */
+/*  AANMELDEN VOOR EEN BUURTINITIATIEF */
+/*  */
+/*  */
+
+.aan-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+} 
+
+.aanmeld-pic{
+    width: 100%; 
+    height: 10rem;
+    align-items: center;
+   opacity: 0.7;
+}
+
+.aan-hallen-house {
+    position: absolute;
+    width: 10rem;
+    height: 3rem;
+    vertical-align: middle;
+    top: 75%;
+}
+
+
+.aan-titel{
+    color: var(--c-background);
+    margin-top: 0.8rem;
+    position: absolute;
+    top: 20%;
+    transform: translate(-50% -50%);
+    text-align: center;
+    text-shadow: 0.4rem 0.4rem 0.4rem var(--c-ex-dark);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 2rem;
+}
+
+.aan-text {
+    font-family: 'ITC Avant Garde Std Bold', arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    margin: 2rem 1rem 0 1rem;
+}
+
+form {
+    max-width: 48rem;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+label {
+    font-family: 'ITC Avant Garde Std Bold', arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--c-main-blue);
+    width: 100%;
+    margin: 2rem 0 0.5rem 2rem;
+    color: var(--c-main-blue);
+}
+  
+  
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea, select {
+    background-color: var(--c-textblock);
+    width: 25rem;
+    margin-left: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+  
+input[type="file"]{
+    margin-bottom: 4rem;
+}
+  
+textarea {
+    height: 100px;
+}
+  
+input[type="submit"] {
+    font-family: 'ITC Avant Garde Std Bold', arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    background-color: var(--c-main-blue);
+    color: var(--c-background);
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin: 2.5rem auto;
+    margin-bottom: 4rem;
+}
+  
+input[type="submit"]:hover{
+    background-color: var(--c-hover-blue);
+    text-decoration: underline;
+    font-size: 1.1rem;
+}

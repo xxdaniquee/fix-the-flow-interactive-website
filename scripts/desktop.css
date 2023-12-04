@@ -1,0 +1,171 @@
+@media (min-width: 1024px) and (max-width: 1919px) {
+    
+    /* Top */
+    
+    .top h1{
+        font-size: 3.5rem;
+        top: 60%;
+    } 
+      
+    
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    
+    /* CARDS */
+    
+    .card-wrap{
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    
+    /* APPLY_INFO */
+    
+    .apply-info p {
+        margin: 0rem 20rem;
+    }
+    
+    .apply-info a {
+        margin: 1rem 25rem 2rem 25rem;
+    }
+      
+    h3 {
+      font-size: 1.1rem;
+    }
+    
+    /* FOOTER */
+    
+    footer {
+      text-align: center;
+    }
+    
+    .row-menu ul li {
+      display: inline-block;
+      margin: 0rem 1rem;
+    }
+    
+    
+    /*  AMSTERDAMS BUURVROUWENCONTACT PAGINA */
+    
+    .abc-top img{
+      height: 20rem;
+    }
+    
+    .abc-top h1{
+      font-size: 3rem;
+      top: 70%;
+    }
+    
+    .abc-info {
+      margin: 2rem 20rem;
+    }
+    
+    .abc-card-left, .abc-card-right {
+     display: flex;
+      width: 60rem;
+      margin: 1rem;
+      padding: 1rem;
+      
+    }
+    
+    .abc-card-left img, .abc-card-right img{
+      width: 27rem;
+      height: 24rem;
+    }
+    
+    .abc-card-right h3 {
+      font-size: 2rem;
+      /* margin-left: 2rem; */
+      padding-top: 1.5rem;
+    }
+    
+    .abc-card-right p {
+      white-space: wrap;
+      margin-right: 3rem;
+      margin-top: 2rem;
+    }
+    
+    
+    .abc-card-right a {
+      display: block;
+      margin-top: 3rem;
+      padding: 1rem;
+      text-align: center;
+    }
+    
+    .abc-card-left{
+      margin-bottom: 5rem;
+      text-align: right;
+    }
+    
+    .abc-card-left h3 {
+      font-size: 2rem;
+      margin-right: 1.2rem;
+      padding-top: 1.5rem;
+    }
+    
+    .abc-card-left p  {
+      text-align: right;
+      white-space: wrap;
+      margin-left: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .abc-card-left a {
+      display: block;
+      margin-top: 3rem;
+      padding: 1rem;
+      text-align: center;
+    }
+    
+    
+    /*  AANMELDEN VOOR EEN BUURTINITIATIEF */
+    
+    .aanmeld-pic{
+      height: 15rem;
+    }
+    
+    .aan-hallen-house {
+      top: 82%;
+    }
+    
+    .aan-titel {
+      top: 40%;
+      font-size: 2.5rem;
+    }
+    
+    .aan-text {
+      margin-left: 4rem;
+      margin-right: 4rem;
+      font-size: 1.1rem;
+    }
+    
+    form {
+      max-width: 80rem;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea, select {
+        width: 50rem;
+    }
+    
+    textarea {
+        height: 100px;
+    }
+    
+    label{
+      text-align: left;
+      margin-left: 15rem;
+      font-size: 1.1rem;
+    }
+    
+    input[type="submit"] {
+          width: 15rem;
+    }
+    
+      }
