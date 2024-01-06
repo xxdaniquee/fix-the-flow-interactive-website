@@ -98,8 +98,8 @@ h3 {
     
 }
 
-p {
-    font-family: 'ITC Avant Garde Gothic Std Medium', arial, sans-serif;
+p, input {
+    font-family: 'ITC Avant Garde Gothic Std Md', arial, sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 1rem;
@@ -128,6 +128,7 @@ Header{
     padding: 0.8rem 1.4rem;
     background-color: var(--c-background);
 }
+
 
 .logo img{  
     max-width: 35%;
