@@ -64,8 +64,10 @@ textarea {
 }
 
 .step-3 input {
-    width: 80%; 
-    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--c-textblock);
 }
 
 .form-checkbox {
